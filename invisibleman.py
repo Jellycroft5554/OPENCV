@@ -23,9 +23,10 @@ while(raw_video.isOpened()):
     count +=1
     img=np.flip(img,axis=1)
     #HSV>RGB in colour detection
-    hsv=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+    hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+    
     lower_red1=np.array([140,40,40])
-    upper_red1=np.array([100,255,25])
+    upper_red1=np.array([100,255,255])
 
     lower_red2=np.array([155,40,40])
     upper_red2=np.array([180,255,255])
